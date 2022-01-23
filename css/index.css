@@ -5,43 +5,29 @@
     padding:0;
 }
 
-/*HEADER OK*/
+/*HEADER*/
 
 header{
     background-color: #cc9fc4;
-    height:250px;
     text-align: center;
     color: white;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 40% 40%;
-    grid-template-areas: "logo"
-                         "texto";
-    align-content: center;
 }
 
 header h1{
-    padding-top: 20px;
-    font-size: 50px;
     font-style: italic;
     font-weight: 5;
     font-family:'Times New Roman', Times, serif;
-    grid-area: texto;
-    align-self: center;
 }
 
 .logo{
     height:150px;
-    justify-self: center;
-    align-self: center;
 }
 
 
-/*NAV OK*/
+/*NAV*/
 
 nav{
     background-color:#81467c ;
-    height:60px;
     border-bottom-style: solid;
     border-bottom-color: white; 
     position: sticky;
@@ -51,11 +37,6 @@ nav{
 
 #formatonav {
     height: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;   
-    align-content: center;
 }
 
 #formatonav li {
@@ -75,27 +56,16 @@ background-color: rgb(156, 134, 160);
 
 /*MAIN*/
 
-/*INDEX OK*/
+/*INDEX*/
 
 main {
-    width: 100%;
-    height: 600px;
     background-image: url(../img/cupcakes-productos.jpg)  ;
     background-position: center;  
-    
 }
-#mainindexflex {
-    height: 22%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    justify-content: space-evenly;
-}
+
 #titulomain{
     margin-top: 20px;
     text-align: center;
-    font-size: 60px;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: rgb(117, 85, 112);
 }
@@ -105,7 +75,6 @@ main {
     font-weight:initial;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: indigo;
-    font-size: 25px;
     text-align: center;
 }
 
@@ -113,53 +82,29 @@ main {
 
 .sobrenosotros {
     background-image: url(../img/fondo-sobrenosotros-violeta.jpg);
-    height: 600px;
 }
 
 #snmainflex {
-    width: 100%;
-    text-align: center;
-    font-size: 45pt;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: white;
     
 }
 
-#snmaingrilla {
-    height: 350px;
-    display: grid;
-    grid-template-columns: 0.5fr 0.5fr 0.5fr;
-    grid-template-rows: 100%;
-    grid-template-areas: "foto1 foto2 foto3";
-}
-
-#snmaingrilla .foto1 {
+.foto1 {
     border: solid whitesmoke;
-    grid-area: foto1;
-    justify-self: center;
-    align-self: center;
-
 }
 
-#snmaingrilla .foto2 {
+.foto2 {
     border: solid whitesmoke;
-    grid-area: foto2;
-    justify-self: center;
-    align-self: center;
 }
-#snmaingrilla .foto3 {
+.foto3 {
     border: solid whitesmoke;
-    grid-area: foto3;
-    justify-self: center;
-    align-self: center;
 }
-
 
 #snmainparrafo {
     margin-left: 5px;
     width: 99%;
     height: 20%;
-   
 }
 #snmainparrafo p {
     color: white;
@@ -173,7 +118,6 @@ main {
 
 #productos main {
     background-image: url(../img/fondo-sobrenosotros-violeta.jpg);
-    height: 1025px;
     padding-bottom: 0px;
     background-position: center; 
     overflow: visible;
@@ -183,7 +127,6 @@ main {
     text-align: center;
     padding-top: 10px;
     padding-bottom: 15px;
-    font-size: 50px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: white;
 }
@@ -201,34 +144,15 @@ main {
 }
 
 
-#productos main .listadoprecios h3 {
+.listadoprecios h3 {
     margin-left: 5px;
     margin-bottom: 10px;
     margin-top: 20px;
     color: rgb(249, 243, 252);
-    font-size: 30pt;
     font-style: italic;
     font-family: 'Times New Roman', Times, serif;
     text-align: left;
     text-decoration: underline;  
-}
-
-#productos main ul .listado1 {
-    margin: 5px;
-    padding: 5px;
-    list-style: circle;
-    color: white;
-    list-style: none;
-    font-size: 20pt;
-    font-style: italic;
-}
-
-#productos main ul .listado2 {
-    height: 200px;
-    color: white;
-    list-style: circle;
-    width: 500px;
-    text-align: justify;
 }
 
 thead tr th {
@@ -239,121 +163,59 @@ tbody tr td {
     text-align: center;
 }
 
-
-
-
-
-
-
 /*SUCURSALES*/
 
 #sucursales main {
     background-image: url(../img/fondo-sobrenosotros-violeta.jpg);
-    height: 700px; 
     background-position: center; 
     overflow: visible;
 }
 
 .tituloprincipal {
-    height: 140px;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 15px;
-    font-size: 50px;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: white;
 }
 
-#grillasucursales {
-    display: grid;
-    grid-template-columns: 33.3% 33.3% 33.3%;
-    grid-template-rows: 5% 50% 25%;
-    grid-template-areas: "libertador cabildo mapipu"
-                        "mapalib mapacab mapamaipu"
-                        "pielib piecab piemaipu";
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    height: 550px;
-    width: 96%;
-
-}
-
 .libertador {
-    grid-area: libertador;
     color: white;
     text-align: center;
-    font-size: 20pt;
 }
 .cabildo {
-    grid-area: cabildo;
     color: white;
     text-align: center;
-    font-size: 20pt;
 }
 .maipu {
-    grid-area: mapipu;
     color: white;
     text-align: center;
-    font-size: 20pt;
 }
 
-.mapalibertador {
-    height: 100% ;
-    width: 90% ;
-    grid-area: mapalib;
-    justify-self: center;
-}
-.mapacabildo {
-    height: 100% ;
-    width: 90%;
-    grid-area: mapacab;
-    justify-self: center;
-}
-.mapamaipu {
-    height: 100% ;
-    width: 90% ;
-    grid-area: mapamaipu;
-    justify-self: center;
-}
 .pielibertador {
-    grid-area: pielib;
     color: white;
-    text-align: center;
-    font-size: 15pt;
     font-style: italic;
 }
 .piecabildo {
-    grid-area: piecab;
     color: white;
-    text-align: center;
-    font-size: 15pt;
     font-style: italic;
 }
 .piemaipu {
-    grid-area: piemaipu;
     color: white;
-    text-align: center;
-    font-size: 15pt;
     font-style: italic;
 }
-
-
-
 
 /*CONTACTO*/
 
 #contacto main {
     background-image: url(../img/fondo-sobrenosotros-violeta.jpg);
-    height: 700px;
     padding-bottom: 0px;
     background-position: center; 
     overflow: visible;
 }
 
 .titulocontacto {
-    height: 120px;
     text-align: center;
-    font-size: 50px;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: white;
 }
@@ -367,15 +229,9 @@ tbody tr td {
 
 footer{
     background-color: #81467c ;
-    height: 70px;
     width: 100%;
     border-top: solid white;
     color: white;
-    display: grid;
-    grid-template-columns: 1fr 1.5fr 0.1fr 0.1fr;
-    grid-template-rows: 100%;
-    grid-template-areas: "copyright textor  wplogo iglogo";
-    grid-column-gap: 10px;
 
 }
 
@@ -384,9 +240,6 @@ footer{
     font-size: 15px;
     text-align: left;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  
-    grid-area: copyright; 
-    align-self: flex-end;
-    margin-left: 10px;
 }
 
 .textoredes {
@@ -480,8 +333,6 @@ nav{
 main {
     width: 100%;
     height: 500px;
-    background-image: url(../img/cupcakes-productos.jpg)  ;
-    background-position: center;  
     
 }
 #mainindexflex {
@@ -492,14 +343,12 @@ main {
     justify-content: flex-start;
     justify-content: space-evenly;
 }
-#mainindexflex .titulomain{
-    text-align: center;
+#titulomain{
     font-size: 25px;
 }
 
-#mainindexflex .parrafomain {
+#parrafomain {
     font-size: 15px;
-    text-align: center;
 }
 
 
@@ -546,20 +395,17 @@ main {
 }
 
 #snmaingrilla .foto1 {
-    border: solid whitesmoke;
     grid-area: foto1;
     justify-self: center;
     align-self: center;
 
 }
 #snmaingrilla .foto2 {
-    border: solid whitesmoke;
     grid-area: foto2;
     justify-self: center;
     align-self: center;
 }
 #snmaingrilla .foto3 {
-    border: solid whitesmoke;
     grid-area: foto3;
     justify-self: center;
     align-self: center;
@@ -567,41 +413,24 @@ main {
 }
 
 #snmainparrafo p {
-    color: white;
     font-size: 10pt;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style: italic;
-
 }
 
 
 /*(PRODUCTOS)*/
 
 #productos main {
-    height: 1025px;
+    height: 800px;
 }
 
-#productos main .tituloproductos {
+.tituloproductos {
     font-size: 28px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 
-#productos main .listadoprecios h3 {
+.listadoprecios h3 {
     font-size: 25px;  
 }
-
-
-thead tr th {
-    text-align: center;
-}
-
-tbody tr td {
-    text-align: center;
-}
-
-
-
 
 
 /*(SUCURSALES)*/
@@ -638,20 +467,14 @@ tbody tr td {
 
 .libertador {
     grid-area: libertador;
-    color: white;
-    text-align: center;
     font-size: 15pt;
 }
 .cabildo {
     grid-area: cabildo;
-    color: white;
-    text-align: center;
     font-size: 15pt;
 }
 .maipu {
     grid-area: maipu;
-    color: white;
-    text-align: center;
     font-size: 15pt;
 }
 
@@ -675,30 +498,16 @@ tbody tr td {
 }
 .pielibertador {
     grid-area: pielib;
-    color: white;
-    text-align: center;
     font-size: 11pt;
-    font-style: italic;
 }
 .piecabildo {
     grid-area: piecab;
-    color: white;
-    text-align: center;
     font-size: 11pt;
-    font-style: italic;
 }
 .piemaipu {
     grid-area: piemaipu;
-    color: white;
-    text-align: center;
     font-size: 11pt;
-    font-style: italic;
 }
-
-
-
-
-
 
 /*(CONTACTO)*/
 
@@ -708,70 +517,10 @@ tbody tr td {
 
 .titulocontacto {
     height: 80px;
-    text-align: center;
     font-size: 25px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: white;
 }
-
-.formulario form {
-    width: 500px;
-    height: 400px;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: "nombre"
-                        "mail"
-                        "telefono"
-                        "mensaje"
-                        "boton";
-    grid-row-gap: 10px;
-    justify-items: flex-start;
-    
-}
-.nombre input {
-    height: 30px;
-    border: solid white;
-    background-color: rgb(255, 255, 255);
-    grid-area: nombre;
-}
-.mail input {
-    width: 200px;
-    height: 30px;
-    border: solid white;
-    background-color: rgb(255, 255, 255);
-    grid-area: mail;
-}
-.telefono input {
-    width: 150px;
-    height: 30px;
-    border: solid white;
-    background-color: rgb(255, 255, 255);
-    grid-area: telefono;
-}
-.mensaje textarea {
-    width: 80%;
-    border: solid white;
-    background-color: rgb(255, 255, 255);
-    grid-area: mensaje;
-    justify-self: flex-end;
-}
-.botonenv input {
-    background-color: rgb(72, 5, 99);
-    color: white;
-    grid-area: boton;
-}
-
-
-
-
-
-
 
 /* FIN DEL MAIN*/
-
-
-
 
 /*FOOTER*/ 
 
@@ -885,12 +634,12 @@ footer{
         justify-content: flex-start;
         justify-content: space-evenly;
     }
-    #mainindexflex .titulomain{
+    #titulomain{
         text-align: center;
         font-size: 30px;
     }
     
-    #mainindexflex .parrafomain {
+    #parrafomain {
         font-size: 20px;
         text-align: center;
     }
@@ -1271,12 +1020,12 @@ footer{
         justify-content: flex-start;
         justify-content: space-evenly;
     }
-    #mainindexflex .titulomain{
+    #titulomain{
         text-align: center;
         font-size: 35px;
     }
     
-    #mainindexflex .parrafomain {
+    #parrafomain {
         font-size: 22px;
         text-align: center;
     }
@@ -1654,12 +1403,12 @@ footer{
         justify-content: flex-start;
         justify-content: space-evenly;
     }
-    #mainindexflex .titulomain{
+    #titulomain{
         text-align: center;
         font-size: 40px;
     }
     
-    #mainindexflex .parrafomain {
+    #parrafomain {
         font-size: 25px;
         text-align: center;
     }
@@ -2037,12 +1786,12 @@ footer{
         justify-content: flex-start;
         justify-content: space-evenly;
     }
-    #mainindexflex .titulomain{
+    #titulomain{
         text-align: center;
         font-size: 50px;
     }
     
-    #mainindexflex .parrafomain {
+    #parrafomain {
         font-size: 30px;
         text-align: center;
     }
