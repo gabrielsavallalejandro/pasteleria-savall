@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
+    <!-----------------Link Tipografias------------------------------------>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <!-----------------Link Animaciones------------------------------------>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="js/wow.min.js"></script>
     <title>Catecakes</title>
@@ -16,14 +18,12 @@
     <header>
         <h1>CATE CAKES</h1>
 
-        <!--ACA VA EL LOGO--> 
-            
-        <img class="logo" src="img/logocatecakes.png" alt="Logo Catecakes">
+        <img class="logo__header" src="img/logocatecakes.png" alt="Logo Catecakes">
             
     </header>
    
     <nav>
-        <ul id="formatonav">
+        <ul class="nav__formato">
 
             <li>
                 <a href="index.html">HOME</a>
@@ -46,35 +46,31 @@
             </li>
 
         </ul>
-       </div>
-
     </nav>
 
    <!--MAIN--> 
     <main>
-        <div id="mainindexflex">
-            <h2 id="titulomain">Bienvenidos a Cate Cakes</h2>
-            <p id="parrafomain" class="animate__animated animate__fadeIn" >
+        <div id="main__grid">
+            <h2 class="main__titulo">Bienvenidos a Cate Cakes</h2>
+            <p class="main__parrafo , animate__animated animate__fadeIn" >
                 <i>Realizamos pedidos para cumpleaños de quince, casamientos, reuniones laborales y eventos</i>
             </P>
-        </div>
-       
-                 
+        </div>   
     </main>
 
     <!--FIN DEL MAIN--> 
     
     <footer>
-         <h2 class="textoredes">
+        <h2 class="titulo__redes">
             Seguinos en nuestras redes
-         </h2>   
-            
-        <p class="hijocopyright">©copyright by Catecakes</p>    
+        </h2>   
+    
+        <p class="parrafo__copyright">©copyright by Catecakes</p>    
                    
-        <a class="wplogo" href="https://web.whatsapp.com/" >
+        <a class="logo__wp" href="https://web.whatsapp.com/" >
             <img src="img/logowp.png" alt="Logo Whatsapp" height="35px" width="35px">
         </a>
-        <a class="iglogo" href="https://www.instagram.com/catecakes_/" >
+        <a class="logo__ig" href="https://www.instagram.com/catecakes_/" >
             <img src="img/logoinstagram.png" alt="Logo Whatsapp" height="35px" width="35px">
         </a>  
     </footer>

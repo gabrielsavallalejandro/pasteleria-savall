@@ -1,0 +1,148 @@
+header{
+    background-color: #cc9fc4;
+    text-align: center;
+    color: white;
+    
+    h1{
+        font-style: italic;
+        font-weight: 5;
+        font-family:'Times New Roman', Times, serif;
+    }
+
+    .logo__header{
+        height:150px;
+    }
+}
+@media only screen and ( max-width: 600px) {    
+    header{
+        height:150px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 40% 40%;
+        grid-template-areas: "logo"
+                             "texto";
+        align-content: center;
+
+        &h1{
+            padding-top: 10px;
+            font-size: 35px;
+            grid-area: texto;
+            justify-self: center;
+        }
+        .logo__header{
+            height:100px;
+            justify-self: center;
+            align-self: center;
+        }
+    }
+
+}
+
+@media only screen and ( min-width: 600px) {
+    header{
+        height:150px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 40% 40%;
+        grid-template-areas: "logo"
+                             "texto";
+        align-content: center;
+
+        &h1{
+            padding-top: 10px;
+            font-size: 40px;
+            grid-area: texto;
+            justify-self: center;
+        }
+
+        .logo__header{
+            height:100px;
+            justify-self: center;
+            align-self: center;
+        }
+    }
+
+}   
+
+@media only screen and ( min-width: 768px) {
+    header{
+        height:180px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 40% 40%;
+        grid-template-areas: "logo"
+                             "texto";
+        align-content: center;
+        & h1{
+            padding-top: 10px;
+            font-size: 45px;
+            grid-area: texto;
+            justify-self: center;
+        }
+        .logo__header{
+            height:110px;
+            justify-self: center;
+            align-self: center;
+        }
+    }
+}    
+
+@media only screen and ( min-width: 992px) {
+        header{
+        height:190px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 40% 40%;
+        grid-template-areas: "logo"
+                             "texto";
+        align-content: center;
+
+        &h1{
+            padding-top: 15px;
+            font-size: 50px;
+            grid-area: texto;
+            justify-self: center;
+        }
+        .logo__header{
+            height:110px;
+            justify-self: center;
+            align-self: center;
+        }
+    }
+}   
+
+@media only screen and ( min-width: 1200px) {
+        header{
+        height:190px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 40% 40%;
+        grid-template-areas: "logo"
+                             "texto";
+        align-content: center;
+        &h1{
+            padding-top: 20px;
+            font-size: 50px;
+            grid-area: texto;
+            justify-self: center;
+        }
+        .logo__header{
+            height:130px;
+            justify-self: center;
+            align-self: center;
+        }
+    }
+      
+}
+    
+    
+    
+    
+
+    
+    
+    
+    
+        
+    
+    
