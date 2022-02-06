@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <title>Catecakes</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/index.css">
+    <title>Contactanos</title>
     
 </head>
 <body>
@@ -44,33 +45,35 @@
     </nav>
 
      <!--MAIN--> 
-     <div id="contacto">
+     <div id="div__contacto">
         <main>
-            <div class="titulocontacto">
+            <div class="main__titulo__contacto">
                 <h2> Contactanos</h2>
             </div>
+            <div class="container">
+                <form class="row g-3">
+                    <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="inputEmail4">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputPassword4" class="form-label">Telefono</label>
+                        <input type="number" class="form-control" id="inputPassword4">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputCity" class="form-label">Mail</label>
+                        <input type="email" class="form-control" id="inputCity">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputCity" class="form-label">Mensaje</label>
+                        <input type="text" class="form-control" id="inputCity">
+                    </div>
+                        <div class="col-md-4">
+                </form>
+                    <button type="reset" class="btn btn-secondary btn-xs">Borrar</button>
+                    <button type="button" class="btn btn-secondary btn-xs">Enviar</button>
+            </div>
 
-            <form class="row g-3">
-                <div class="col-md-6">
-                    <label for="inputEmail4" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="inputEmail4">
-                </div>
-                <div class="col-md-6">
-                    <label for="inputPassword4" class="form-label">Telefono</label>
-                    <input type="number" class="form-control" id="inputPassword4">
-                </div>
-                <div class="col-md-6">
-                    <label for="inputCity" class="form-label">Mail</label>
-                    <input type="email" class="form-control" id="inputCity">
-                </div>
-                <div class="col-md-6">
-                    <label for="inputCity" class="form-label">Mensaje</label>
-                    <input type="text" class="form-control" id="inputCity">
-                </div>
-                    <div class="col-md-4">
-            </form>
-                    <button type="reset" class="btn btn-secondary">Borrar</button>
-                    <button type="button" class="btn btn-secondary">Enviar</button>
 
         </main>
     </div>
@@ -94,7 +97,6 @@
        </a>  
    </footer>
    
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 </body>
 </html>
