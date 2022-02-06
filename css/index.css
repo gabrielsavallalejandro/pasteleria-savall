@@ -1085,7 +1085,7 @@ main {
       text-align: center; }
   /*(SOBRE NOSOTROS)*/
   .main__sobrenosotros {
-    height: 400px;
+    height: 500px;
     /*Tamaños de las fotos*/ }
     .main__sobrenosotros .main__titulo__sobrenosotros {
       font-size: 30pt; }
