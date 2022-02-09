@@ -8,6 +8,7 @@
 @import"nav.scss";
 @import"footer.scss";
 @import"_variables.scss";
+@import"mixin.scss";
 
 
 /*----------------------------ESTILOS MAIN GENERALES----------------------------*/
@@ -123,33 +124,29 @@ main{
         font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         color: white;
     }
-    .libertador {
+    .estilo_subtitulos{
         color: white;
         text-align: center;
+    }
+    .libertador {
+        @extend .estilo_subtitulos;
+        
     }
     .cabildo {
-        color: white;
-        text-align: center;
+      @extend .estilo_subtitulos;
     }
     .maipu {
-        color: white;
-        text-align: center;
+        @extend .estilo_subtitulos;
     }
     
     .pielibertador {
-        color: white;
-        font-style: italic;
-        text-align: center;
+        @include pieMapa
     }
     .piecabildo {
-        color: white;
-        font-style: italic;
-        text-align: center;
+        @include pieMapa
     }
     .piemaipu {
-        color: white;
-        font-style: italic;
-        text-align: center;
+        @include pieMapa
     }
     
 }

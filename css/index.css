@@ -450,13 +450,7 @@ main {
     padding-bottom: 15px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: white; }
-  #div__sucursales main .libertador {
-    color: white;
-    text-align: center; }
-  #div__sucursales main .cabildo {
-    color: white;
-    text-align: center; }
-  #div__sucursales main .maipu {
+  #div__sucursales main .estilo_subtitulos, #div__sucursales main .libertador, #div__sucursales main .cabildo, #div__sucursales main .maipu {
     color: white;
     text-align: center; }
   #div__sucursales main .pielibertador {
