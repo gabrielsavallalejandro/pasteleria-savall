@@ -1,36 +1,36 @@
-@charset "UTF-8";
 /*--------------------------RESETEO CSS--------------------------*/
 * {
   margin: 0;
   padding: 0; }
 
 /*----------------IMPORTACION ESTILOS Y VARIABLES----------------*/
+/*-----------ESTILOS GENERALES-----------*/
 header {
   background-color: #cc9fc4;
   text-align: center;
   color: white; }
-  header h1 {
-    font-style: italic;
-    font-weight: 5;
-    font-family: 'Times New Roman', Times, serif; }
-  header .logo__header {
+  header .header__titulo {
+    font-family: 'Source Serif Pro', serif; }
+  header .header__logo {
     height: 150px; }
 
+/*------------MEDIA QUERIES------------*/
 @media only screen and (max-width: 600px) {
   header {
-    height: 150px;
+    height: 200px;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     grid-template-rows: 40% 40%;
-    grid-template-areas: "logo" "texto";
+    grid-template-areas: "logo" "titulo";
     align-content: center; }
-    headerh1 {
-      padding-top: 10px;
-      font-size: 35px;
-      grid-area: texto;
-      justify-self: center; }
-    header .logo__header {
+    header .header__logo {
       height: 100px;
+      justify-self: center;
+      align-self: center;
+      grid-area: logo; }
+    header .header__titulo {
+      font-size: 35px;
+      grid-area: titulo;
       justify-self: center;
       align-self: center; } }
 
@@ -38,91 +38,100 @@ header {
   header {
     height: 150px;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     grid-template-rows: 40% 40%;
-    grid-template-areas: "logo" "texto";
+    grid-template-areas: "logo" "titulo";
     align-content: center; }
-    headerh1 {
-      padding-top: 10px;
-      font-size: 40px;
-      grid-area: texto;
-      justify-self: center; }
-    header .logo__header {
+    header .header__titulo {
+      font-size: 35px;
+      grid-area: titulo;
+      justify-self: center;
+      align-self: center; }
+    header .header__logo {
       height: 100px;
       justify-self: center;
-      align-self: center; } }
+      align-self: center;
+      grid-area: logo; } }
 
 @media only screen and (min-width: 768px) {
   header {
     height: 180px;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     grid-template-rows: 40% 40%;
-    grid-template-areas: "logo" "texto";
+    grid-template-areas: "logo" "titulo";
     align-content: center; }
-    header h1 {
-      padding-top: 10px;
+    header .header__titulo {
       font-size: 45px;
-      grid-area: texto;
-      justify-self: center; }
-    header .logo__header {
+      grid-area: titulo;
+      justify-self: center;
+      align-self: center; }
+    header .header__logo {
       height: 110px;
       justify-self: center;
-      align-self: center; } }
+      align-self: center;
+      grid-area: logo; } }
 
 @media only screen and (min-width: 992px) {
   header {
     height: 190px;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     grid-template-rows: 40% 40%;
-    grid-template-areas: "logo" "texto";
+    grid-template-areas: "logo" "titulo";
     align-content: center; }
-    headerh1 {
-      padding-top: 15px;
+    header .header__titulo {
       font-size: 50px;
-      grid-area: texto;
-      justify-self: center; }
-    header .logo__header {
+      grid-area: titulo;
+      justify-self: center;
+      align-self: center; }
+    header .header__logo {
       height: 110px;
       justify-self: center;
-      align-self: center; } }
+      align-self: center;
+      grid-area: logo; } }
 
 @media only screen and (min-width: 1200px) {
   header {
     height: 190px;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     grid-template-rows: 40% 40%;
-    grid-template-areas: "logo" "texto";
+    grid-template-areas: "logo" "titulo";
     align-content: center; }
-    headerh1 {
-      padding-top: 20px;
+    header .header__titulo {
       font-size: 50px;
-      grid-area: texto;
-      justify-self: center; }
-    header .logo__header {
+      grid-area: titulo;
+      justify-self: center;
+      align-self: center; }
+    header .header__logo {
       height: 130px;
       justify-self: center;
-      align-self: center; } }
+      align-self: center;
+      grid-area: logo; } }
 
+/*-----------ESTILOS GENERALES-----------*/
 nav {
   background-color: #81467c;
   border-bottom-style: solid;
   border-bottom-color: white;
   position: sticky;
+  z-index: 3;
   top: 0; }
   nav .nav__formato {
     height: 100%; }
   nav li {
     list-style: none; }
   nav a {
+    font-family: 'Noto Serif', serif;
     text-decoration: none;
     font-size: 15pt;
     color: white; }
     nav a:hover {
-      background-color: #9c86a0; }
+      background-color: #9c86a0;
+      color: white; }
 
+/*------------MEDIA QUERIES------------*/
 @media only screen and (max-width: 600px) {
   nav {
     height: 200px; }
@@ -131,9 +140,10 @@ nav {
       flex-direction: column;
       flex-wrap: nowrap;
       justify-content: space-evenly;
-      align-items: center; }
+      align-items: center;
+      padding: 0px; }
     nav a {
-      font-size: 15pt; } }
+      font-size: 20px; } }
 
 @media only screen and (min-width: 600px) {
   nav {
@@ -143,9 +153,10 @@ nav {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-evenly;
-      align-items: center; }
+      align-items: center;
+      padding: 0px; }
     nav a {
-      font-size: 10pt; } }
+      font-size: 16px; } }
 
 @media only screen and (min-width: 768px) {
   nav {
@@ -155,9 +166,10 @@ nav {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-evenly;
-      align-items: center; }
+      align-items: center;
+      padding: 0px; }
     nav a {
-      font-size: 14pt; } }
+      font-size: 20px; } }
 
 @media only screen and (min-width: 992px) {
   nav {
@@ -167,9 +179,10 @@ nav {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-evenly;
-      align-items: center; }
+      align-items: center;
+      padding: 0px; }
     nav a {
-      font-size: 16pt; } }
+      font-size: 23px; } }
 
 @media only screen and (min-width: 1200px) {
   nav {
@@ -179,67 +192,58 @@ nav {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-evenly;
-      align-items: center; }
+      align-items: center;
+      padding: 0px; }
     nav a {
-      font-size: 18pt; } }
+      font-size: 23px; } }
 
+/*-----------ESTILOS GENERALES-----------*/
 footer {
   background-color: #81467c;
   width: 100%;
   border-top: solid white;
   color: white; }
+  footer .titulo__redes {
+    height: 30%;
+    font-family: 'Times New Roman', Times, serif; }
   footer .parrafo__copyright {
     height: 30%;
-    font-size: 15px;
-    text-align: left;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
-  footer .titulo__redes {
-    height: 35%;
-    font-size: 20px;
-    text-align: right;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style: italic;
-    grid-area: textor;
-    align-self: flex-end; }
-  footer .logo__wp {
-    grid-area: wplogo;
-    align-self: flex-end;
-    justify-self: center;
+    font-family: 'Times New Roman', Times, serif; }
+  footer .logo__wp, footer .logo__ig {
     transition: height 2s, widht 2s; }
-    footer .logo__wp:hover {
+    footer .logo__wp:hover, footer .logo__ig:hover {
       height: 40px;
       width: 38px; }
   footer .logo__ig {
     grid-area: iglogo;
-    align-self: flex-end;
-    justify-self: center;
-    margin-right: 10px;
-    transition: height 2s, widht 2s; }
+    margin-right: 10px; }
     footer .logo__ig:hover {
       height: 40px;
       width: 38px; }
 
+/*------------MEDIA QUERIES------------*/
 @media only screen and (max-width: 600px) {
   footer {
-    height: 70px;
+    height: 105px;
     display: grid;
     grid-template-columns: 1.5fr 1.5fr 0.5fr 0.5fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "copyright copyright none none"  "textor textor wplogo iglogo";
-    grid-column-gap: 5px; }
+    column-gap: 5px; }
+    footer .titulo__redes {
+      font-size: 14.5px;
+      grid-area: textor;
+      align-self: flex-end;
+      justify-self: flex-end;
+      margin-bottom: 10px; }
     footer .parrafo__copyright {
       font-size: 15px;
       grid-area: copyright;
       align-self: flex-start;
       justify-self: flex-start;
-      margin-left: 10px; }
-    footer .titulo__redes {
-      font-size: 13px;
-      text-align: center;
-      grid-area: textor;
-      align-self: flex-start;
-      justify-self: flex-end; }
-    footer .logo__wp {
+      margin-left: 10px;
+      margin-top: 10px; }
+    footer .logo__wp, footer .logo__ig {
       grid-area: wplogo;
       align-self: flex-end;
       justify-self: flex-end; }
@@ -251,24 +255,24 @@ footer {
 
 @media only screen and (min-width: 600px) {
   footer {
-    height: 70px;
+    height: 100px;
     display: grid;
     grid-template-columns: 1fr 1.5fr 0.1fr 0.1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "copyright textor  wplogo iglogo";
-    grid-column-gap: 10px; }
+    column-gap: 10px; }
     footer .parrafo__copyright {
-      font-size: 13px;
+      font-size: 15.5px;
       grid-area: copyright;
       align-self: flex-end;
+      justify-self: flex-start;
       margin-left: 10px; }
     footer .titulo__redes {
       font-size: 15.5px;
-      text-align: center;
       grid-area: textor;
-      justify-self: flex-end;
-      align-content: flex-end; }
-    footer .logo__wp {
+      align-self: flex-end;
+      justify-self: flex-end; }
+    footer .logo__wp, footer .logo__ig {
       grid-area: wplogo;
       align-self: flex-end;
       justify-self: center; }
@@ -280,25 +284,26 @@ footer {
 
 @media only screen and (min-width: 768px) {
   footer {
-    height: 70px;
+    height: 100px;
     display: grid;
     grid-template-columns: 1fr 1.5fr 0.1fr 0.1fr;
-    grid-template-rows: 100%;
+    grid-template-rows: 1fr;
     grid-template-areas: "copyright textor  wplogo iglogo";
-    grid-column-gap: 10px; }
+    column-gap: 10px; }
     footer .parrafo__copyright {
       height: 30%;
       width: 150px;
       font-size: 13px;
       grid-area: copyright;
       align-self: flex-end;
+      justify-self: flex-start;
       margin-left: 10px; }
     footer .titulo__redes {
       font-size: 20px;
-      text-align: center;
       grid-area: textor;
-      justify-self: flex-end; }
-    footer .logo__wp {
+      justify-self: flex-end;
+      align-self: flex-end; }
+    footer .logo__wp, footer .logo__ig {
       grid-area: wplogo;
       align-self: flex-end;
       justify-self: center; }
@@ -310,25 +315,26 @@ footer {
 
 @media only screen and (min-width: 992px) {
   footer {
-    height: 70px;
+    height: 100px;
     display: grid;
     grid-template-columns: 1fr 1.5fr 0.1fr 0.1fr;
-    grid-template-rows: 100%;
+    grid-template-rows: 1fr;
     grid-template-areas: "copyright textor  wplogo iglogo";
-    grid-column-gap: 10px; }
+    column-gap: 10px; }
     footer .parrafo__copyright {
       height: 30%;
       width: 150px;
       font-size: 13px;
       grid-area: copyright;
       align-self: flex-end;
+      justify-self: flex-start;
       margin-left: 10px; }
     footer .titulo__redes {
       font-size: 20px;
-      text-align: center;
       grid-area: textor;
-      justify-self: flex-end; }
-    footer .logo__wp {
+      justify-self: flex-end;
+      align-self: flex-end; }
+    footer .logo__wp, footer .logo__ig {
       grid-area: wplogo;
       align-self: flex-end;
       justify-self: center; }
@@ -340,25 +346,26 @@ footer {
 
 @media only screen and (min-width: 1200px) {
   footer {
-    height: 70px;
+    height: 100px;
     display: grid;
     grid-template-columns: 1fr 1.5fr 0.1fr 0.1fr;
     grid-template-rows: 100%;
     grid-template-areas: "copyright textor  wplogo iglogo";
-    grid-column-gap: 10px; }
+    column-gap: 10px; }
     footer .parrafo__copyright {
       height: 30%;
       width: 150px;
       font-size: 13px;
       grid-area: copyright;
       align-self: flex-end;
+      justify-self: flex-start;
       margin-left: 10px; }
     footer .titulo__redes {
       font-size: 20px;
-      text-align: center;
       grid-area: textor;
-      justify-self: flex-end; }
-    footer .logo__wp {
+      justify-self: flex-end;
+      align-self: flex-end; }
+    footer .logo__wp, footer .logo__ig {
       grid-area: wplogo;
       align-self: flex-end;
       justify-self: center; }
@@ -368,843 +375,1006 @@ footer {
       justify-self: center;
       margin-right: 10px; } }
 
+/*----------------Mixin Generales---------------------*/
 /*----------------------------ESTILOS MAIN GENERALES----------------------------*/
 /*-----------------------HOME---------------------------*/
-main {
-  background-image: url(../img/cupcakes-productos.jpg);
+#main__home {
+  background-image: url(../img/fondo__home.png);
   background-position: center;
   width: 100%; }
-  main .main__titulo__home {
-    margin-top: 20px;
-    text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: #755570; }
-  main .main__parrafo {
+  #main__home .main__titulo__home {
+    font-family: 'Times New Roman', Times, serif;
     font-style: italic;
-    font-weight: initial;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: indigo;
+    color: #755570;
+    text-align: center; }
+  #main__home .main__parrafo__home {
+    font-style: oblique;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: #755570;
     text-align: center; }
 
 /*----------------SOBRE NOSOTROS----------------*/
-.main__sobrenosotros {
-  background-image: url(../img/fondo-sobrenosotros-violeta.jpg); }
-  .main__sobrenosotros .main__titulo__sobrenosotros {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: white;
-    text-align: center;
-    width: 100%; }
-  .main__sobrenosotros .foto1 {
-    border: solid whitesmoke; }
-  .main__sobrenosotros .foto2 {
-    border: solid whitesmoke; }
-  .main__sobrenosotros .foto3 {
-    border: solid whitesmoke; }
-  .main__sobrenosotros p {
-    color: white;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style: italic; }
+#main__sobrenosotros {
+  background-image: url(../img/fondo__principal.png);
+  background-position: center; }
+  #main__sobrenosotros .main__titulo__sobrenosotros {
+    background-color: #70076638;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    padding: 0;
+    margin-bottom: 50px; }
+    #main__sobrenosotros .main__titulo__sobrenosotros h2 {
+      font-family: 'Times New Roman', Times, serif;
+      font-style: italic;
+      color: #443542;
+      margin-bottom: 0;
+      font-weight: bold;
+      line-height: 0; }
+  #main__sobrenosotros #main__sobrenosotros__parrafo .parrafo_1 {
+    color: indigo;
+    font-family: 'Nunito', sans-serif;
+    text-align: justify; }
+  #main__sobrenosotros #main__sobrenosotros__parrafo .parrafo_2 {
+    color: indigo;
+    font-family: 'Nunito', sans-serif;
+    text-align: justify; }
+  #main__sobrenosotros #main__sobrenosotros__parrafo .parrafo_3 {
+    color: indigo;
+    font-family: 'Nunito', sans-serif;
+    text-align: justify; }
 
 /*---------------------PRODUCTOS-------------------*/
-.main__productos {
-  background-image: url(../img/fondo-sobrenosotros-violeta.jpg);
-  background-position: center;
-  overflow: visible; }
-  .main__productos .main__titulo__productos {
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 15px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: white; }
-  .main__productos .main__img__productos img {
-    display: inline-block;
-    margin-bottom: 10px;
-    margin-left: 1.5%;
-    margin-right: 1.5%;
-    margin-top: 10px;
-    width: 29%;
+#main__productos {
+  background-image: url(../img/fondo__principal.png);
+  background-position: center; }
+  #main__productos .main__titulo__productos {
+    background-color: #70076638;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
-    border: solid white; }
-  .main__productos .main__subtitulos h3 {
-    margin-left: 5px;
-    margin-bottom: 10px;
-    margin-top: 20px;
-    color: #f9f3fc;
-    font-style: italic;
+    align-content: center;
+    padding: 0;
+    margin-bottom: 50px; }
+    #main__productos .main__titulo__productos h2 {
+      font-family: 'Times New Roman', Times, serif;
+      font-style: italic;
+      color: #443542;
+      margin-bottom: 0;
+      font-weight: bold;
+      line-height: 0; }
+  #main__productos .main__productos__grilla .titulo_tortas, #main__productos .main__productos__grilla .titulo_brownie, #main__productos .main__productos__grilla .titulo_cupcake {
     font-family: 'Times New Roman', Times, serif;
-    text-align: center;
-    text-decoration: underline; }
-  .main__productos thead tr th {
-    text-align: center; }
-  .main__productos tbody tr td {
-    text-align: center; }
+    color: black; }
+  #main__productos .main__productos__grilla .precio__tortas, #main__productos .main__productos__grilla .precio__brownie, #main__productos .main__productos__grilla .precio__cupcake {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    color: black; }
 
 /*--------------------SUCURSALES--------------------*/
-#div__sucursales main {
-  background-image: url(../img/fondo-sobrenosotros-violeta.jpg);
+#main__sucursales {
+  background-image: url(../img/fondo__principal.png);
   background-position: center;
   overflow: visible; }
-  #div__sucursales main .main__titulo__sucursales {
+  #main__sucursales .main__titulo__sucursales {
+    background-color: #70076638;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    padding: 0;
+    margin-bottom: 50px; }
+    #main__sucursales .main__titulo__sucursales h2 {
+      font-family: 'Times New Roman', Times, serif;
+      font-style: italic;
+      color: #443542;
+      margin-bottom: 0;
+      font-weight: bold;
+      line-height: 0; }
+  #main__sucursales .libertador {
+    color: black;
     text-align: center;
-    padding-top: 10px;
-    padding-bottom: 15px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: white; }
-  #div__sucursales main .estilo_subtitulos, #div__sucursales main .libertador, #div__sucursales main .cabildo, #div__sucursales main .maipu {
-    color: white;
-    text-align: center; }
-  #div__sucursales main .pielibertador {
-    color: white;
-    font-style: italic;
-    text-align: center; }
-  #div__sucursales main .piecabildo {
-    color: white;
-    font-style: italic;
-    text-align: center; }
-  #div__sucursales main .piemaipu {
-    color: white;
-    font-style: italic;
-    text-align: center; }
+    font-family: 'Times New Roman', Times, serif; }
+  #main__sucursales .cabildo {
+    color: black;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif; }
+  #main__sucursales .maipu {
+    color: black;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif; }
+  #main__sucursales .pielibertador {
+    color: black;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif; }
+  #main__sucursales .piecabildo {
+    color: black;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif; }
+  #main__sucursales .piemaipu {
+    color: black;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif; }
 
 /*--------------------------------------CONTACTO---------------------------------------*/
-#div__contacto main {
-  background-image: url(../img/fondo-sobrenosotros-violeta.jpg);
+#main__contacto {
+  background-image: url(../img/fondo__principal.png);
   padding-bottom: 0px;
   background-position: center;
   overflow: visible; }
-  #div__contacto main .main__titulo__contacto {
-    text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: white; }
-  #div__contacto main .form-label {
-    color: white;
+  #main__contacto .main__titulo__contacto {
+    background-color: #70076638;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    padding: 0;
+    margin-bottom: 50px; }
+    #main__contacto .main__titulo__contacto h2 {
+      font-family: 'Times New Roman', Times, serif;
+      font-style: italic;
+      color: #443542;
+      margin-bottom: 0;
+      font-weight: bold;
+      line-height: 0; }
+  #main__contacto .form-label {
+    color: black;
     font-style: italic; }
 
 /*----------------------------------MEDIAS QUERIES_MAIN------------------------------*/
-/*-----------------------Pantallas pequeñas--------------*/
 @media only screen and (max-width: 600px) {
-  /*(HOME)*/
-  main {
-    width: 100%;
+  /*------------(HOME)------------*/
+  #main__home {
     height: 500px; }
-    main #main__grilla__home {
+    #main__home .main__flex__home {
+      height: 150px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around; }
+    #main__home .main__titulo__home {
+      font-size: 25px; }
+    #main__home .main__parrafo__home {
+      font-size: 15px; }
+  /*------------(SOBRE NOSOTROS)------------*/
+  #main__sobrenosotros {
+    height: 1000px; }
+    #main__sobrenosotros .main__titulo__sobrenosotros h2 {
+      font-size: 35px; }
+    #main__sobrenosotros #main__sobrenosotros__parrafo {
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr;
-      grid-template-areas: "titulo" "parrafo"; }
-    main .main__titulo__home {
-      font-size: 25px;
-      grid-area: titulo; }
-    main .main__parrafo {
-      font-size: 15px;
-      grid-area: parrafo; }
-  /*(SOBRE NOSOTROS)*/
-  .main__sobrenosotros {
-    height: 1000px;
-    /*Tamaños de las fotos*/ }
-    .main__sobrenosotros .main__titulo__sobrenosotros {
-      font-size: 20pt; }
-    .main__sobrenosotros #main__grilla__sobrenosotros {
-      height: 860px;
-      margin-top: 10px;
+      grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
+      grid-template-areas: "imagen" "parrafo1" "parrafo2" "parrafo3";
+      row-gap: 10px;
+      margin-top: 50px;
+      margin-bottom: 10px; }
+      #main__sobrenosotros #main__sobrenosotros__parrafo .parrafo_1 {
+        grid-area: parrafo1;
+        font-size: 20px;
+        margin-bottom: 0;
+        justify-self: center;
+        width: 96%; }
+      #main__sobrenosotros #main__sobrenosotros__parrafo .parrafo_2 {
+        grid-area: parrafo2;
+        font-size: 20px;
+        margin-bottom: 0;
+        text-align: justify;
+        justify-self: center;
+        width: 96%; }
+      #main__sobrenosotros #main__sobrenosotros__parrafo .parrafo_3 {
+        grid-area: parrafo3;
+        font-size: 20px;
+        margin-bottom: 0;
+        text-align: justify;
+        justify-self: center;
+        width: 96%; }
+      #main__sobrenosotros #main__sobrenosotros__parrafo .img_aboutus {
+        grid-area: imagen;
+        align-self: center;
+        justify-self: center; }
+  /*------------(PRODUCTOS)------------*/
+  #main__productos {
+    height: 2350px; }
+    #main__productos .main__titulo__productos h2 {
+      font-size: 35px; }
+    #main__productos .main__productos__grilla {
+      width: 100%;
+      height: 85%;
       display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
-      grid-template-areas: "foto1"  "foto2" "foto3" "parrafo";
-      grid-row-gap: 20px; }
-      .main__sobrenosotros #main__grilla__sobrenosotros .foto1 {
-        grid-area: foto1;
+      grid-template-columns: 100%;
+      grid-template-rows: 5% 13.3% 10% 5% 13.3% 10% 5% 13.3% 10%;
+      grid-template-areas: "titulot" "fotot"  "preciot" "titulob" "fotob" "preciob" "tituloc" "fotoc" "precioc";
+      row-gap: 50px; }
+      #main__productos .main__productos__grilla .titulo_tortas, #main__productos .main__productos__grilla .titulo_brownie, #main__productos .main__productos__grilla .titulo_cupcake {
         justify-self: center;
-        align-self: center; }
-      .main__sobrenosotros #main__grilla__sobrenosotros .foto2 {
-        grid-area: foto2;
+        align-self: center;
+        grid-area: titulot;
+        font-size: 30px; }
+      #main__productos .main__productos__grilla .titulo_brownie {
         justify-self: center;
-        align-self: center; }
-      .main__sobrenosotros #main__grilla__sobrenosotros .foto3 {
-        grid-area: foto3;
+        align-self: center;
+        grid-area: titulob;
+        font-size: 30px; }
+      #main__productos .main__productos__grilla .titulo_cupcake {
         justify-self: center;
-        align-self: center; }
-      .main__sobrenosotros #main__grilla__sobrenosotros p {
-        font-size: 12pt;
-        grid-area: parrafo;
-        margin-left: 5px; }
-    .main__sobrenosotros .foto1 {
-      height: 80%;
-      width: 90%; }
-    .main__sobrenosotros .foto2 {
-      height: 80%;
-      width: 90%; }
-    .main__sobrenosotros .foto3 {
-      height: 80%;
-      width: 90%; }
-  /*(PRODUCTOS)*/
-  .main__productos {
-    height: 800px; }
-    .main__productos .main__titulo__productos {
-      font-size: 28px; }
-    .main__productos .main__subtitulos h3 {
-      font-size: 25px; }
-  /*(SUCURSALES)*/
-  #div__sucursales main {
-    height: 750px; }
-    #div__sucursales main .main__titulo__sucursales {
-      height: 50px;
-      font-size: 25px; }
-    #div__sucursales main #main__grilla_sucursales {
+        align-self: center;
+        grid-area: tituloc;
+        font-size: 30px; }
+      #main__productos .main__productos__grilla .precio__tortas, #main__productos .main__productos__grilla .precio__brownie, #main__productos .main__productos__grilla .precio__cupcake {
+        grid-area: preciot;
+        align-self: flex-start;
+        margin-left: 1px;
+        font-size: 20px; }
+      #main__productos .main__productos__grilla .precio__brownie {
+        grid-area: preciob;
+        align-self: flex-start;
+        margin-left: 1px;
+        font-size: 20px; }
+      #main__productos .main__productos__grilla .precio__cupcake {
+        grid-area: precioc;
+        align-self: flex-start;
+        margin-left: 1px;
+        font-size: 20px; }
+      #main__productos .main__productos__grilla .img_torta {
+        grid-area: fotot;
+        justify-self: center;
+        width: 95%;
+        height: 100%; }
+      #main__productos .main__productos__grilla .img_brownie {
+        grid-area: fotob;
+        justify-self: center;
+        width: 95%;
+        height: 100%; }
+      #main__productos .main__productos__grilla .img_cupcake {
+        grid-area: fotoc;
+        justify-self: center;
+        width: 95%;
+        height: 100%; }
+  /*------------(SUCURUSALES)------------*/
+  #main__sucursales {
+    height: 1000px; }
+    #main__sucursales .main__titulo__sucursales h2 {
+      font-size: 45px; }
+    #main__sucursales #main__grilla_sucursales {
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 25% 1fr 1fr 25% 1fr 1fr 25% 1fr;
       grid-template-areas: "libertador" "mapalib" "pielib" "cabildo" "mapacab" "piecab" "maipu" "mapamaipu" "piemaipu";
-      grid-column-gap: 10px;
-      grid-row-gap: 10px;
+      column-gap: 10px;
+      row-gap: 10px;
       height: 550px;
       width: 96%; }
-      #div__sucursales main #main__grilla_sucursales .libertador {
+      #main__sucursales #main__grilla_sucursales .libertador {
         grid-area: libertador;
-        font-size: 15pt; }
-      #div__sucursales main #main__grilla_sucursales .cabildo {
+        font-size: 30px; }
+      #main__sucursales #main__grilla_sucursales .cabildo {
         grid-area: cabildo;
-        font-size: 15pt; }
-      #div__sucursales main #main__grilla_sucursales .maipu {
+        font-size: 30px; }
+      #main__sucursales #main__grilla_sucursales .maipu {
         grid-area: maipu;
-        font-size: 15pt; }
-      #div__sucursales main #main__grilla_sucursales .mapalibertador {
+        font-size: 30px; }
+      #main__sucursales #main__grilla_sucursales .mapalibertador {
         height: 100%;
         width: 90%;
         grid-area: mapalib;
         justify-self: center; }
-      #div__sucursales main #main__grilla_sucursales .mapacabildo {
+      #main__sucursales #main__grilla_sucursales .mapacabildo {
         height: 100%;
         width: 90%;
         grid-area: mapacab;
         justify-self: center; }
-      #div__sucursales main #main__grilla_sucursales .mapamaipu {
+      #main__sucursales #main__grilla_sucursales .mapamaipu {
         height: 100%;
         width: 90%;
         grid-area: mapamaipu;
         justify-self: center; }
-      #div__sucursales main #main__grilla_sucursales .pielibertador {
+      #main__sucursales #main__grilla_sucursales .pielibertador {
         grid-area: pielib;
-        font-size: 11pt; }
-      #div__sucursales main #main__grilla_sucursales .piecabildo {
+        font-size: 15px;
+        font-style: italic; }
+      #main__sucursales #main__grilla_sucursales .piecabildo {
         grid-area: piecab;
-        font-size: 11pt; }
-      #div__sucursales main #main__grilla_sucursales .piemaipu {
+        font-size: 15px;
+        font-style: italic; }
+      #main__sucursales #main__grilla_sucursales .piemaipu {
         grid-area: piemaipu;
-        font-size: 11pt; }
-  /*(CONTACTO)*/
-  #div__contacto main {
-    height: 500px; }
-    #div__contacto main .main__titulo__contacto {
-      height: 80px;
-      font-size: 25px; } }
+        font-size: 15px;
+        font-style: italic; }
+  /*------------(CONTACTO)------------*/
+  #main__contacto {
+    height: 650px; }
+    #main__contacto .main__titulo__contacto h2 {
+      font-size: 35px; } }
 
-/*----------------Pantallas pequeñas horizontales-------------*/
-@media only screen and (min-width: 600px) {
-  /*(HOME)*/
-  main {
-    width: 100%;
-    height: 550px;
-    background-image: url(../img/cupcakes-productos.jpg);
-    background-position: center; }
-    main #main__grilla__home {
-      height: 22%;
+@media only screen and (min-width: 601px) {
+  /*------------(HOME)------------*/
+  #main__home {
+    height: 550px; }
+    #main__home .main__flex__home {
+      height: 150px;
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      justify-content: flex-start;
-      justify-content: space-evenly; }
-    main .main__titulo__home {
-      text-align: center;
+      align-items: center;
+      justify-content: space-around; }
+    #main__home .main__titulo__home {
       font-size: 30px; }
-    main .main__parrafo {
-      font-size: 20px;
-      text-align: center; }
-  /*(SOBRE NOSOTROS)*/
-  .main__sobrenosotros {
-    height: 600px;
-    /*Tamaños de las fotos*/ }
-    .main__sobrenosotros .main__titulo__sobrenosotros {
-      font-size: 30pt; }
-    .main__sobrenosotros #main__grilla__sobrenosotros {
-      height: 500px;
-      margin-top: 10px;
+    #main__home .main__parrafo__home {
+      font-size: 20px; }
+  /*------------(SOBRE NOSOTROS)------------*/
+  #main__sobrenosotros {
+    height: 900px; }
+    #main__sobrenosotros .main__titulo__sobrenosotros h2 {
+      font-size: 45px; }
+    #main__sobrenosotros #main__sobrenosotros__parrafo {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr 0.5fr;
-      grid-template-areas: "foto1 foto2"  "foto3 foto3" "parrafo parrafo";
-      grid-row-gap: 10px;
-      grid-column-gap: 10px; }
-      .main__sobrenosotros #main__grilla__sobrenosotros .foto1 {
-        border: solid whitesmoke;
-        grid-area: foto1;
-        justify-self: flex-end;
-        align-self: center; }
-      .main__sobrenosotros #main__grilla__sobrenosotros .foto2 {
-        border: solid whitesmoke;
-        grid-area: foto2;
-        justify-self: flex-start;
-        align-self: center; }
-      .main__sobrenosotros #main__grilla__sobrenosotros .foto3 {
-        border: solid whitesmoke;
-        grid-area: foto3;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.5fr 0.5fr 0.2fr 0.5fr;
+      grid-template-areas: "imagen" "parrafo1" "parrafo2" "parrafo3";
+      row-gap: 10px;
+      margin-top: 50px;
+      margin-bottom: 10px; }
+      #main__sobrenosotros #main__sobrenosotros__parrafo .parrafo_1 {
+        grid-area: parrafo1;
+        font-size: 20px;
+        margin-bottom: 0;
         justify-self: center;
-        align-self: center; }
-      .main__sobrenosotros #main__grilla__sobrenosotros p {
-        grid-area: parrafo;
-        color: white;
-        font-size: 10pt;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-style: italic;
-        margin-left: 5px; }
-    .main__sobrenosotros .foto1 {
-      height: 80%;
-      width: 90%; }
-    .main__sobrenosotros .foto2 {
-      height: 80%;
-      width: 90%; }
-    .main__sobrenosotros .foto3 {
-      height: 80%;
-      width: 90%; }
-  /*(PRODUCTOS)*/
-  .main__productos {
-    height: 800px; }
-    .main__productos .main__titulo__productos {
-      font-size: 30px;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
-    .main__productos .main__subtitulos h3 {
-      font-size: 27px; }
-    .main__productos thead tr th {
-      text-align: center; }
-    .main__productos tbody tr td {
-      text-align: center; }
-  /*(SUCURSALES)*/
-  #div__sucursales main {
-    height: 750px; }
-    #div__sucursales main .main__titulo__sucursales {
-      height: 50px;
-      font-size: 25pt; }
-    #div__sucursales main #main__grilla_sucursales {
+        width: 96%; }
+      #main__sobrenosotros #main__sobrenosotros__parrafo .parrafo_2 {
+        grid-area: parrafo2;
+        font-size: 20px;
+        margin-bottom: 0;
+        justify-self: center;
+        width: 96%; }
+      #main__sobrenosotros #main__sobrenosotros__parrafo .parrafo_3 {
+        grid-area: parrafo3;
+        font-size: 20px;
+        margin-bottom: 0;
+        justify-self: center;
+        width: 96%; }
+      #main__sobrenosotros #main__sobrenosotros__parrafo .img_aboutus {
+        grid-area: imagen;
+        align-self: center;
+        justify-self: center; }
+  /*------------(PRODUCTOS)------------*/
+  #main__productos {
+    height: 3200px; }
+    #main__productos .main__titulo__productos h2 {
+      font-size: 45px; }
+    #main__productos .main__productos__grilla {
+      width: 100%;
+      height: 95%;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 5% 15% 11.6% 5% 15% 11.6% 5% 15% 11.6%;
+      grid-template-areas: "titulot" "fotot"  "preciot" "titulob" "fotob" "preciob" "tituloc" "fotoc" "precioc"; }
+      #main__productos .main__productos__grilla .titulo_tortas, #main__productos .main__productos__grilla .titulo_brownie, #main__productos .main__productos__grilla .titulo_cupcake {
+        justify-self: center;
+        align-self: center;
+        grid-area: titulot;
+        font-size: 40px; }
+      #main__productos .main__productos__grilla .titulo_brownie {
+        justify-self: center;
+        align-self: center;
+        grid-area: titulob;
+        font-size: 40px; }
+      #main__productos .main__productos__grilla .titulo_cupcake {
+        justify-self: center;
+        align-self: center;
+        grid-area: tituloc;
+        font-size: 40px; }
+      #main__productos .main__productos__grilla .precio__tortas, #main__productos .main__productos__grilla .precio__brownie, #main__productos .main__productos__grilla .precio__cupcake {
+        grid-area: preciot;
+        align-self: center;
+        justify-content: space-evenly;
+        margin-left: 1px;
+        font-size: 25px; }
+      #main__productos .main__productos__grilla .precio__brownie {
+        grid-area: preciob;
+        align-self: center;
+        margin-left: 1px;
+        font-size: 25px; }
+      #main__productos .main__productos__grilla .precio__cupcake {
+        grid-area: precioc;
+        align-self: center;
+        margin-left: 1px;
+        font-size: 25px; }
+      #main__productos .main__productos__grilla .img_torta {
+        grid-area: fotot;
+        justify-self: center;
+        width: 95%;
+        height: 100%; }
+      #main__productos .main__productos__grilla .img_brownie {
+        grid-area: fotob;
+        justify-self: center;
+        width: 95%;
+        height: 100%; }
+      #main__productos .main__productos__grilla .img_cupcake {
+        grid-area: fotoc;
+        justify-self: center;
+        width: 95%;
+        height: 100%; }
+  /*------------(SUCURSALES)------------*/
+  #main__sucursales {
+    height: 1000px; }
+    #main__sucursales .main__titulo__sucursales h2 {
+      font-size: 45px; }
+    #main__sucursales #main__grilla_sucursales {
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 25% 1fr 1fr 25% 1fr 1fr 25% 1fr;
       grid-template-areas: "libertador" "mapalib" "pielib" "cabildo" "mapacab" "piecab" "maipu" "mapamaipu" "piemaipu";
-      grid-column-gap: 10px;
-      grid-row-gap: 10px;
+      column-gap: 10px;
+      row-gap: 10px;
       height: 550px;
       width: 96%; }
-      #div__sucursales main #main__grilla_sucursales .libertador {
+      #main__sucursales #main__grilla_sucursales .libertador {
         grid-area: libertador;
-        color: white;
-        text-align: center;
-        font-size: 15pt; }
-      #div__sucursales main #main__grilla_sucursales .cabildo {
+        font-size: 35px; }
+      #main__sucursales #main__grilla_sucursales .cabildo {
         grid-area: cabildo;
-        color: white;
-        text-align: center;
-        font-size: 15pt; }
-      #div__sucursales main #main__grilla_sucursales .maipu {
+        font-size: 35px; }
+      #main__sucursales #main__grilla_sucursales .maipu {
         grid-area: maipu;
-        color: white;
-        text-align: center;
-        font-size: 15pt; }
-      #div__sucursales main #main__grilla_sucursales .mapalibertador {
+        font-size: 35px; }
+      #main__sucursales #main__grilla_sucursales .mapalibertador {
         height: 100%;
         width: 90%;
         grid-area: mapalib;
         justify-self: center; }
-      #div__sucursales main #main__grilla_sucursales .mapacabildo {
+      #main__sucursales #main__grilla_sucursales .mapacabildo {
         height: 100%;
         width: 90%;
         grid-area: mapacab;
         justify-self: center; }
-      #div__sucursales main #main__grilla_sucursales .mapamaipu {
+      #main__sucursales #main__grilla_sucursales .mapamaipu {
         height: 100%;
         width: 90%;
         grid-area: mapamaipu;
         justify-self: center; }
-      #div__sucursales main #main__grilla_sucursales .pielibertador {
+      #main__sucursales #main__grilla_sucursales .pielibertador {
         grid-area: pielib;
-        color: white;
-        text-align: center;
-        font-size: 11pt;
+        font-size: 20px;
         font-style: italic; }
-      #div__sucursales main #main__grilla_sucursales .piecabildo {
+      #main__sucursales #main__grilla_sucursales .piecabildo {
         grid-area: piecab;
-        color: white;
-        text-align: center;
-        font-size: 11pt;
+        font-size: 20px;
         font-style: italic; }
-      #div__sucursales main #main__grilla_sucursales .piemaipu {
+      #main__sucursales #main__grilla_sucursales .piemaipu {
         grid-area: piemaipu;
-        color: white;
-        text-align: center;
-        font-size: 11pt;
+        font-size: 20px;
         font-style: italic; }
-  /*(CONTACTO)*/
-  #div__contacto main {
-    height: 500px; }
-    #div__contacto main .main__titulo__contacto {
-      height: 80px;
-      text-align: center;
-      font-size: 25px;
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-      color: white; } }
+  /*------------(CONTACTO)------------*/
+  #main__contacto {
+    height: 560px; }
+    #main__contacto .main__titulo__contacto h2 {
+      font-size: 45px; } }
 
-/*-----------------------Pantallas medianas----------------*/
 @media only screen and (min-width: 768px) {
-  /*(HOME)*/
-  main {
-    width: 100%;
-    height: 550px;
-    background-image: url(../img/cupcakes-productos.jpg);
-    background-position: center; }
-    main #main__grilla__home {
-      height: 22%;
+  /*------------(HOME)------------*/
+  #main__home {
+    height: 550px; }
+    #main__home .main__flex__home {
+      height: 150px;
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
       justify-content: flex-start;
-      justify-content: space-evenly; }
-    main .main__titulo__home {
-      text-align: center;
+      justify-content: space-evenly;
+      justify-content: space-around; }
+    #main__home .main__titulo__home {
       font-size: 35px; }
-    main .main__parrafo {
-      font-size: 25px;
-      text-align: center; }
-  /*(SOBRE NOSOTROS)*/
-  .main__sobrenosotros {
-    height: 700px;
-    /*Tamaños de las fotos*/ }
-    .main__sobrenosotros .main__titulo__sobrenosotros {
-      font-size: 30pt; }
-    .main__sobrenosotros #main__grilla__sobrenosotros {
-      height: 370px;
-      margin-top: 10px;
+    #main__home .main__parrafo__home {
+      font-size: 25px; }
+  /*------------(SOBRE NOSOTROS)------------*/
+  #main__sobrenosotros {
+    height: 900px; }
+    #main__sobrenosotros .main__titulo__sobrenosotros h2 {
+      font-size: 55px; }
+    #main__sobrenosotros #main__sobrenosotros__parrafo {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr 0.5fr;
-      grid-template-areas: "foto1 foto2"  "foto3 foto3" "parrafo parrafo";
-      grid-row-gap: 10px;
-      grid-column-gap: 10px; }
-      .main__sobrenosotros #main__grilla__sobrenosotros .foto1 {
-        border: solid whitesmoke;
-        grid-area: foto1;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.5fr 0.5fr 0.2fr 0.5fr;
+      grid-template-areas: "imagen" "parrafo1" "parrafo2" "parrafo3";
+      row-gap: 10px;
+      margin-top: 50px;
+      margin-bottom: 10px; }
+      #main__sobrenosotros #main__sobrenosotros__parrafo .parrafo_1 {
+        grid-area: parrafo1;
+        font-size: 20px;
+        margin-bottom: 0;
+        text-align: justify;
         justify-self: center;
-        align-self: center; }
-      .main__sobrenosotros #main__grilla__sobrenosotros .foto2 {
-        border: solid whitesmoke;
-        grid-area: foto2;
+        width: 96%; }
+      #main__sobrenosotros #main__sobrenosotros__parrafo .parrafo_2 {
+        grid-area: parrafo2;
+        font-size: 20px;
+        margin-bottom: 0;
+        text-align: justify;
         justify-self: center;
-        align-self: center; }
-      .main__sobrenosotros #main__grilla__sobrenosotros .foto3 {
-        border: solid whitesmoke;
-        grid-area: foto3;
+        width: 96%; }
+      #main__sobrenosotros #main__sobrenosotros__parrafo .parrafo_3 {
+        grid-area: parrafo3;
+        font-size: 20px;
+        margin-bottom: 0;
+        text-align: justify;
         justify-self: center;
-        align-self: center; }
-      .main__sobrenosotros #main__grilla__sobrenosotros p {
-        grid-area: parrafo;
-        color: white;
-        font-size: 10pt;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-style: italic;
-        margin-left: 5px; }
-    .main__sobrenosotros .foto1 {
-      height: 230px;
-      width: 310px; }
-    .main__sobrenosotros .foto2 {
-      height: 230px;
-      width: 310px; }
-    .main__sobrenosotros .foto3 {
-      height: 220px;
-      width: 550px; }
-  /*(PRODUCTOS)*/
-  .main__productos {
-    height: 800px; }
-    .main__productos .main__titulo__productos {
-      font-size: 33px;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
-    .main__productos .main__subtitulos h3 {
-      font-size: 29px; }
-    .main__productos thead tr th {
-      text-align: center; }
-    .main__productos tbody tr td {
-      text-align: center; }
-  /*(SUCURSALES)*/
-  #div__sucursales main {
+        width: 96%; }
+      #main__sobrenosotros #main__sobrenosotros__parrafo .img_aboutus {
+        grid-area: imagen;
+        align-self: center;
+        justify-self: center; }
+  /*------------(PRODUCTOS)------------*/
+  #main__productos {
+    height: 3000px; }
+    #main__productos .main__titulo__productos h2 {
+      font-size: 55px; }
+    #main__productos .main__productos__grilla {
+      width: 100%;
+      height: 95%;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 5% 15% 11.6% 5% 15% 11.6% 5% 15% 11.6%;
+      grid-template-areas: "titulot" "fotot"  "preciot" "titulob" "fotob" "preciob" "tituloc" "fotoc" "precioc"; }
+      #main__productos .main__productos__grilla .titulo_tortas, #main__productos .main__productos__grilla .titulo_brownie, #main__productos .main__productos__grilla .titulo_cupcake {
+        justify-self: center;
+        align-self: center;
+        grid-area: titulot; }
+      #main__productos .main__productos__grilla .titulo_brownie {
+        justify-self: center;
+        align-self: center;
+        grid-area: titulob; }
+      #main__productos .main__productos__grilla .titulo_cupcake {
+        justify-self: center;
+        align-self: center;
+        grid-area: tituloc; }
+      #main__productos .main__productos__grilla .precio__tortas, #main__productos .main__productos__grilla .precio__brownie, #main__productos .main__productos__grilla .precio__cupcake {
+        grid-area: preciot;
+        align-self: center;
+        justify-content: space-evenly;
+        margin-left: 1px; }
+      #main__productos .main__productos__grilla .precio__brownie {
+        grid-area: preciob;
+        align-self: center;
+        margin-left: 1px; }
+      #main__productos .main__productos__grilla .precio__cupcake {
+        grid-area: precioc;
+        align-self: center;
+        margin-left: 1px; }
+      #main__productos .main__productos__grilla .img_torta {
+        grid-area: fotot;
+        justify-self: center;
+        width: 95%;
+        height: 100%; }
+      #main__productos .main__productos__grilla .img_brownie {
+        grid-area: fotob;
+        justify-self: center;
+        width: 95%;
+        height: 100%; }
+      #main__productos .main__productos__grilla .img_cupcake {
+        grid-area: fotoc;
+        justify-self: center;
+        width: 95%;
+        height: 100%; }
+  /*------------(SUCURSALES)------------*/
+  #main__sucursales {
     height: 100%; }
-    #div__sucursales main .main__titulo__sucursales {
-      height: 60px;
-      font-size: 28px; }
-    #div__sucursales main #main__grilla_sucursales {
+    #main__sucursales .main__titulo__sucursales h2 {
+      font-size: 55px; }
+    #main__sucursales #main__grilla_sucursales {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 1fr 50% 1fr 1fr 50% 1fr 1fr 50% 1fr;
       grid-template-areas: "libertador cabildo maipu" "mapalib mapacab mapamaipu" "pielib piecab piemaipu";
-      grid-column-gap: 10px;
-      grid-row-gap: 20px;
+      column-gap: 10px;
+      row-gap: 20px;
       height: 550px;
       width: 96%; }
-      #div__sucursales main #main__grilla_sucursales .libertador {
+      #main__sucursales #main__grilla_sucursales .libertador {
         grid-area: libertador;
-        color: white;
-        text-align: center;
-        font-size: 15pt; }
-      #div__sucursales main #main__grilla_sucursales .cabildo {
+        font-size: 35px; }
+      #main__sucursales #main__grilla_sucursales .cabildo {
         grid-area: cabildo;
-        color: white;
-        text-align: center;
-        font-size: 15pt; }
-      #div__sucursales main #main__grilla_sucursales .maipu {
+        font-size: 35px; }
+      #main__sucursales #main__grilla_sucursales .maipu {
         grid-area: maipu;
-        color: white;
-        text-align: center;
-        font-size: 15pt; }
-      #div__sucursales main #main__grilla_sucursales .mapalibertador {
+        font-size: 35px; }
+      #main__sucursales #main__grilla_sucursales .mapalibertador {
         height: 100%;
         width: 90%;
         grid-area: mapalib;
         justify-self: center; }
-      #div__sucursales main #main__grilla_sucursales .mapacabildo {
+      #main__sucursales #main__grilla_sucursales .mapacabildo {
         height: 100%;
         width: 90%;
         grid-area: mapacab;
         justify-self: center; }
-      #div__sucursales main #main__grilla_sucursales .mapamaipu {
+      #main__sucursales #main__grilla_sucursales .mapamaipu {
         height: 100%;
         width: 90%;
         grid-area: mapamaipu;
         justify-self: center; }
-      #div__sucursales main #main__grilla_sucursales .pielibertador {
+      #main__sucursales #main__grilla_sucursales .pielibertador {
         grid-area: pielib;
-        color: white;
-        text-align: center;
-        font-size: 11pt;
+        font-size: 20px;
         font-style: italic; }
-      #div__sucursales main #main__grilla_sucursales .piecabildo {
+      #main__sucursales #main__grilla_sucursales .piecabildo {
         grid-area: piecab;
-        color: white;
-        text-align: center;
-        font-size: 11pt;
+        font-size: 20px;
         font-style: italic; }
-      #div__sucursales main #main__grilla_sucursales .piemaipu {
+      #main__sucursales #main__grilla_sucursales .piemaipu {
         grid-area: piemaipu;
-        color: white;
-        text-align: center;
-        font-size: 11pt;
+        font-size: 20px;
         font-style: italic; }
-  /*(CONTACTO)*/
-  #div__contacto main {
+  /*------------(CONTACTO)------------*/
+  #main__contacto {
     height: 500px; }
-    #div__contacto main .main__titulo__contacto {
-      height: 80px;
-      text-align: center;
-      font-size: 25px;
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-      color: white; } }
+    #main__contacto .main__titulo__contacto h2 {
+      font-size: 55px; } }
 
-/*------------------Pantallas medianas grandes---------------------------*/
 @media only screen and (min-width: 992px) {
-  /*(HOME)*/
-  main {
-    width: 100%;
+  /*------------(HOME)------------*/
+  #main__home {
     height: 550px;
     background-image: url(../img/cupcakes-productos.jpg);
     background-position: center; }
-    main #main__grilla__home {
-      height: 22%;
+    #main__home .main__flex__home {
+      height: 150px;
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
       justify-content: flex-start;
-      justify-content: space-evenly; }
-    main .main__titulo__home {
-      text-align: center;
+      justify-content: space-around; }
+    #main__home .main__titulo__home {
       font-size: 40px; }
-    main .main__parrafo {
-      font-size: 25px;
-      text-align: center; }
-  /*(SOBRE NOSOTROS)*/
-  .main__sobrenosotros {
-    height: 450px;
-    /*Tamaños de las fotos*/ }
-    .main__sobrenosotros .main__titulo__sobrenosotros {
-      font-size: 30pt; }
-    .main__sobrenosotros #main__grilla__sobrenosotros {
-      height: 250px;
-      margin-top: 10px;
+    #main__home .main__parrafo__home {
+      font-size: 25px; }
+  /*------------(SOBRE NOSOTROS)------------*/
+  #main__sobrenosotros {
+    height: 845px; }
+    #main__sobrenosotros .main__titulo__sobrenosotros h2 {
+      font-size: 65px; }
+    #main__sobrenosotros #main__sobrenosotros__parrafo {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      grid-template-areas: "foto1 foto2 foto3"  "parrafo parrafo parrafo";
+      grid-template-columns: 0.2fr 1fr;
+      grid-template-rows: 0.5fr 0.5fr 0.2fr 0.5fr;
+      grid-template-areas: "none none" "imagen parrafo1" "imagen parrafo2" "imagen parrafo3";
       grid-row-gap: 10px;
-      grid-column-gap: 10px;
-      margin-bottom: 1px; }
-      .main__sobrenosotros #main__grilla__sobrenosotros .foto1 {
-        border: solid whitesmoke;
-        grid-area: foto1;
+      margin-top: 50px; }
+      #main__sobrenosotros #main__sobrenosotros__parrafo .parrafo_1 {
+        grid-area: parrafo1;
+        font-size: 20px;
+        margin-bottom: 0;
         justify-self: center;
-        align-self: center; }
-      .main__sobrenosotros #main__grilla__sobrenosotros .foto2 {
-        border: solid whitesmoke;
-        grid-area: foto2;
+        width: 96%; }
+      #main__sobrenosotros #main__sobrenosotros__parrafo .parrafo_2 {
+        grid-area: parrafo2;
+        font-size: 20px;
+        margin-bottom: 0;
         justify-self: center;
-        align-self: center; }
-      .main__sobrenosotros #main__grilla__sobrenosotros .foto3 {
-        border: solid whitesmoke;
-        grid-area: foto3;
+        width: 96%; }
+      #main__sobrenosotros #main__sobrenosotros__parrafo .parrafo_3 {
+        grid-area: parrafo3;
+        font-size: 20px;
+        margin-bottom: 0;
         justify-self: center;
+        width: 96%; }
+      #main__sobrenosotros #main__sobrenosotros__parrafo .img_aboutus {
+        grid-area: imagen;
         align-self: center; }
-      .main__sobrenosotros #main__grilla__sobrenosotros p {
-        grid-area: parrafo;
-        color: white;
-        font-size: 11pt;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-style: italic;
-        margin-left: 5px; }
-    .main__sobrenosotros .foto1 {
-      height: 230px;
-      width: 290px; }
-    .main__sobrenosotros .foto2 {
-      height: 230px;
-      width: 310px; }
-    .main__sobrenosotros .foto3 {
-      height: 230px;
-      width: 300px; }
-  /*(PRODUCTOS)*/
-  .main__productos {
-    height: 800px; }
-    .main__productos .main__titulo__productos {
-      font-size: 35px;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
-    .main__productos .main__subtitulos h3 {
-      font-size: 32px; }
-    .main__productos thead tr th {
-      text-align: center; }
-    .main__productos tbody tr td {
-      text-align: center; }
-  /*(SUCURSALES)*/
-  #div__sucursales main {
+  /*------------(PRODUCTOS)------------*/
+  #main__productos {
     height: 100%; }
-    #div__sucursales main .main__titulo__sucursales {
-      height: 60px;
-      font-size: 30px; }
-    #div__sucursales main #main__grilla_sucursales {
+    #main__productos .main__titulo__productos h2 {
+      font-size: 55px; }
+    #main__productos .main__productos__grilla {
+      width: 100%;
+      height: 95%;
+      display: grid;
+      grid-template-columns: 33.3% 33.3% 33.3%;
+      grid-template-rows: 10% 30% 30%;
+      grid-template-areas: "titulot titulob tituloc" "fotot fotob fotoc" "preciot preciob precioc";
+      row-gap: 30px; }
+      #main__productos .main__productos__grilla .titulo_tortas, #main__productos .main__productos__grilla .titulo_brownie, #main__productos .main__productos__grilla .titulo_cupcake {
+        justify-self: center;
+        align-self: center;
+        grid-area: titulot; }
+      #main__productos .main__productos__grilla .titulo_brownie {
+        justify-self: center;
+        align-self: center;
+        grid-area: titulob; }
+      #main__productos .main__productos__grilla .titulo_cupcake {
+        justify-self: center;
+        align-self: center;
+        grid-area: tituloc; }
+      #main__productos .main__productos__grilla .precio__tortas, #main__productos .main__productos__grilla .precio__brownie, #main__productos .main__productos__grilla .precio__cupcake {
+        grid-area: preciot;
+        align-self: flex-start;
+        justify-content: space-evenly;
+        margin-left: 1px; }
+      #main__productos .main__productos__grilla .precio__brownie {
+        grid-area: preciob;
+        align-self: flex-start;
+        margin-left: 1px; }
+      #main__productos .main__productos__grilla .precio__cupcake {
+        grid-area: precioc;
+        align-self: flex-start;
+        margin-left: 1px; }
+      #main__productos .main__productos__grilla .img_torta {
+        grid-area: fotot;
+        justify-self: center;
+        align-self: center;
+        width: 95%;
+        height: 100%; }
+      #main__productos .main__productos__grilla .img_brownie {
+        grid-area: fotob;
+        justify-self: center;
+        align-self: center;
+        width: 95%;
+        height: 100%; }
+      #main__productos .main__productos__grilla .img_cupcake {
+        grid-area: fotoc;
+        justify-self: center;
+        align-self: center;
+        width: 95%;
+        height: 100%; }
+  /*------------(SUCURSALES)------------*/
+  #main__sucursales {
+    height: 100%; }
+    #main__sucursales .main__titulo__sucursales h2 {
+      font-size: 65px; }
+    #main__sucursales #main__grilla_sucursales {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 1fr 50% 1fr 1fr 50% 1fr 1fr 50% 1fr;
       grid-template-areas: "libertador cabildo maipu" "mapalib mapacab mapamaipu" "pielib piecab piemaipu";
-      grid-column-gap: 10px;
-      grid-row-gap: 20px;
+      column-gap: 10px;
+      row-gap: 20px;
       height: 550px;
       width: 96%; }
-      #div__sucursales main #main__grilla_sucursales .libertador {
+      #main__sucursales #main__grilla_sucursales .libertador {
         grid-area: libertador;
-        color: white;
-        text-align: center;
-        font-size: 20pt; }
-      #div__sucursales main #main__grilla_sucursales .cabildo {
+        font-size: 55px; }
+      #main__sucursales #main__grilla_sucursales .cabildo {
         grid-area: cabildo;
-        color: white;
-        text-align: center;
-        font-size: 20pt; }
-      #div__sucursales main #main__grilla_sucursales .maipu {
+        font-size: 55px; }
+      #main__sucursales #main__grilla_sucursales .maipu {
         grid-area: maipu;
-        color: white;
-        text-align: center;
-        font-size: 20pt; }
-      #div__sucursales main #main__grilla_sucursales .mapalibertador {
+        font-size: 55px; }
+      #main__sucursales #main__grilla_sucursales .mapalibertador {
         height: 100%;
         width: 90%;
         grid-area: mapalib;
         justify-self: center; }
-      #div__sucursales main #main__grilla_sucursales .mapacabildo {
+      #main__sucursales #main__grilla_sucursales .mapacabildo {
         height: 100%;
         width: 90%;
         grid-area: mapacab;
         justify-self: center; }
-      #div__sucursales main #main__grilla_sucursales .mapamaipu {
+      #main__sucursales #main__grilla_sucursales .mapamaipu {
         height: 100%;
         width: 90%;
         grid-area: mapamaipu;
         justify-self: center; }
-      #div__sucursales main #main__grilla_sucursales .pielibertador {
+      #main__sucursales #main__grilla_sucursales .pielibertador {
         grid-area: pielib;
-        color: white;
-        text-align: center;
-        font-size: 15pt;
+        font-size: 20px;
         font-style: italic; }
-      #div__sucursales main #main__grilla_sucursales .piecabildo {
+      #main__sucursales #main__grilla_sucursales .piecabildo {
         grid-area: piecab;
-        color: white;
-        text-align: center;
-        font-size: 15pt;
+        font-size: 20px;
         font-style: italic; }
-      #div__sucursales main #main__grilla_sucursales .piemaipu {
+      #main__sucursales #main__grilla_sucursales .piemaipu {
         grid-area: piemaipu;
-        color: white;
-        text-align: center;
-        font-size: 15pt;
+        font-size: 20px;
         font-style: italic; }
-  /*(CONTACTO)*/
-  #div__contacto main {
+  /*------------(CONTACTO)------------*/
+  #main__contacto {
     height: 500px; }
-    #div__contacto main .main__titulo__contacto {
-      height: 80px;
-      text-align: center;
-      font-size: 25px;
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-      color: white; } }
+    #main__contacto .main__titulo__contacto h2 {
+      font-size: 65px; } }
 
-/*------------------Pantallas grandes------------------------------*/
 @media only screen and (min-width: 1200px) {
-  /*(HOME)*/
-  main {
-    width: 100%;
+  /*------------(HOME)------------*/
+  #main__home {
     height: 550px;
     background-image: url(../img/cupcakes-productos.jpg);
     background-position: center; }
-    main #main__grilla__home {
-      height: 22%;
+    #main__home .main__flex__home {
+      height: 150px;
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      justify-content: flex-start;
-      justify-content: space-evenly; }
-    main .main__titulo__home {
-      text-align: center;
+      justify-content: space-around; }
+    #main__home .main__titulo__home {
       font-size: 50px; }
-    main .main__parrafo {
-      font-size: 30px;
-      text-align: center; }
-  /*(SOBRE NOSOTROS)*/
-  .main__sobrenosotros {
-    height: 500px;
-    /*Tamaños de las fotos*/ }
-    .main__sobrenosotros .main__titulo__sobrenosotros {
-      font-size: 30pt; }
-    .main__sobrenosotros #main__grilla__sobrenosotros {
-      height: 250px;
-      margin-top: 10px;
+    #main__home .main__parrafo {
+      font-size: 30px; }
+  /*------------(SOBRE NOSOTROS)------------*/
+  #main__sobrenosotros {
+    height: 850px; }
+    #main__sobrenosotros .main__titulo__sobrenosotros h2 {
+      font-size: 75px; }
+    #main__sobrenosotros #main__sobrenosotros__parrafo {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 1fr;
-      grid-template-areas: "foto1 foto2 foto3"  "parrafo parrafo parrafo";
-      grid-row-gap: 10px;
-      grid-column-gap: 10px;
-      margin-bottom: 1px; }
-      .main__sobrenosotros #main__grilla__sobrenosotros .foto1 {
-        border: solid whitesmoke;
-        grid-area: foto1;
+      grid-template-columns: 0.2fr 1fr;
+      grid-template-rows: 0.2fr 0.5fr 0.2fr 0.5fr;
+      grid-template-areas: "none none" "imagen parrafo1" "imagen parrafo2" "imagen parrafo3";
+      grid-row-gap: 10px; }
+      #main__sobrenosotros #main__sobrenosotros__parrafo .parrafo_1 {
+        grid-area: parrafo1;
+        font-size: 20px;
+        margin-bottom: 0;
         justify-self: center;
-        align-self: center; }
-      .main__sobrenosotros #main__grilla__sobrenosotros .foto2 {
-        border: solid whitesmoke;
-        grid-area: foto2;
+        width: 96%; }
+      #main__sobrenosotros #main__sobrenosotros__parrafo .parrafo_2 {
+        grid-area: parrafo2;
+        font-size: 20px;
+        margin-bottom: 0;
         justify-self: center;
-        align-self: center; }
-      .main__sobrenosotros #main__grilla__sobrenosotros .foto3 {
-        border: solid whitesmoke;
-        grid-area: foto3;
+        width: 96%; }
+      #main__sobrenosotros #main__sobrenosotros__parrafo .parrafo_3 {
+        grid-area: parrafo3;
+        font-size: 20px;
+        margin-bottom: 0;
         justify-self: center;
+        width: 96%; }
+      #main__sobrenosotros #main__sobrenosotros__parrafo .img_aboutus {
+        grid-area: imagen;
         align-self: center; }
-      .main__sobrenosotros #main__grilla__sobrenosotros p {
-        grid-area: parrafo;
-        color: white;
-        font-size: 12pt;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-style: italic;
-        margin-left: 5px; }
-    .main__sobrenosotros .foto1 {
-      height: 100%;
-      width: 90%; }
-    .main__sobrenosotros .foto2 {
-      height: 100%;
-      width: 90%; }
-    .main__sobrenosotros .foto3 {
-      height: 100%;
-      width: 90%; }
-  /*(PRODUCTOS)*/
-  .main__productos {
-    height: 800px; }
-    .main__productos .main__titulo__productos {
-      font-size: 40px;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
-    .main__productos .main__subtitulos h3 {
-      font-size: 35px; }
-    .main__productos thead tr th {
-      text-align: center; }
-    .main__productos tbody tr td {
-      text-align: center; }
-  /*(SUCURSALES)*/
-  #div__sucursales main {
+  /*------------(PRODUCTOS)------------*/
+  #main__productos {
     height: 100%; }
-    #div__sucursales main .main__titulo__sucursales {
-      height: 100px;
-      font-size: 40pt; }
-    #div__sucursales main #main__grilla_sucursales {
+    #main__productos .main__titulo__productos h2 {
+      font-size: 55px; }
+    #main__productos .main__productos__grilla {
+      width: 100%;
+      height: 95%;
+      display: grid;
+      grid-template-columns: 33.3% 33.3% 33.3%;
+      grid-template-rows: 10% 30% 30%;
+      grid-template-areas: "titulot titulob tituloc" "fotot fotob fotoc" "preciot preciob precioc";
+      row-gap: 30px; }
+      #main__productos .main__productos__grilla .titulo_tortas, #main__productos .main__productos__grilla .titulo_brownie, #main__productos .main__productos__grilla .titulo_cupcake {
+        font-family: 'Times New Roman', Times, serif;
+        color: black;
+        justify-self: center;
+        align-self: center;
+        grid-area: titulot; }
+      #main__productos .main__productos__grilla .titulo_brownie {
+        font-family: 'Times New Roman', Times, serif;
+        color: black;
+        justify-self: center;
+        align-self: center;
+        grid-area: titulob; }
+      #main__productos .main__productos__grilla .titulo_cupcake {
+        font-family: 'Times New Roman', Times, serif;
+        color: black;
+        justify-self: center;
+        align-self: center;
+        grid-area: tituloc; }
+      #main__productos .main__productos__grilla .precio__tortas, #main__productos .main__productos__grilla .precio__brownie, #main__productos .main__productos__grilla .precio__cupcake {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: bold;
+        color: black;
+        grid-area: preciot;
+        align-self: flex-start;
+        justify-content: space-evenly;
+        margin-left: 1px; }
+      #main__productos .main__productos__grilla .precio__brownie {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: bold;
+        color: black;
+        grid-area: preciob;
+        align-self: flex-start;
+        margin-left: 1px; }
+      #main__productos .main__productos__grilla .precio__cupcake {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: bold;
+        color: black;
+        grid-area: precioc;
+        align-self: flex-start;
+        margin-left: 1px; }
+      #main__productos .main__productos__grilla .img_torta {
+        grid-area: fotot;
+        justify-self: center;
+        align-self: center;
+        width: 95%;
+        height: 100%; }
+      #main__productos .main__productos__grilla .img_brownie {
+        grid-area: fotob;
+        justify-self: center;
+        align-self: center;
+        width: 95%;
+        height: 100%; }
+      #main__productos .main__productos__grilla .img_cupcake {
+        grid-area: fotoc;
+        justify-self: center;
+        align-self: center;
+        width: 95%;
+        height: 100%; }
+  /*------------(SUCURSALES)------------*/
+  #main__sucursales {
+    height: 100%; }
+    #main__sucursales .main__titulo__sucursales h2 {
+      font-size: 75px; }
+    #main__sucursales #main__grilla_sucursales {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 1fr 50% 1fr 1fr 50% 1fr 1fr 50% 1fr;
       grid-template-areas: "libertador cabildo maipu" "mapalib mapacab mapamaipu" "pielib piecab piemaipu";
-      grid-column-gap: 10px;
-      grid-row-gap: 20px;
+      column-gap: 10px;
+      row-gap: 20px;
       height: 600px;
       width: 96%; }
-      #div__sucursales main #main__grilla_sucursales .libertador {
+      #main__sucursales #main__grilla_sucursales .libertador {
+        color: black;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
         grid-area: libertador;
-        color: white;
+        font-size: 60px; }
+      #main__sucursales #main__grilla_sucursales .cabildo {
+        color: black;
         text-align: center;
-        font-size: 20pt; }
-      #div__sucursales main #main__grilla_sucursales .cabildo {
+        font-family: 'Times New Roman', Times, serif;
         grid-area: cabildo;
-        color: white;
+        font-size: 60px; }
+      #main__sucursales #main__grilla_sucursales .maipu {
+        color: black;
         text-align: center;
-        font-size: 20pt; }
-      #div__sucursales main #main__grilla_sucursales .maipu {
+        font-family: 'Times New Roman', Times, serif;
         grid-area: maipu;
-        color: white;
-        text-align: center;
-        font-size: 20pt; }
-      #div__sucursales main #main__grilla_sucursales .mapalibertador {
+        font-size: 60px; }
+      #main__sucursales #main__grilla_sucursales .mapalibertador {
         height: 100%;
         width: 90%;
         grid-area: mapalib;
         justify-self: center; }
-      #div__sucursales main #main__grilla_sucursales .mapacabildo {
+      #main__sucursales #main__grilla_sucursales .mapacabildo {
         height: 100%;
         width: 90%;
         grid-area: mapacab;
         justify-self: center; }
-      #div__sucursales main #main__grilla_sucursales .mapamaipu {
+      #main__sucursales #main__grilla_sucursales .mapamaipu {
         height: 100%;
         width: 90%;
         grid-area: mapamaipu;
         justify-self: center; }
-      #div__sucursales main #main__grilla_sucursales .pielibertador {
+      #main__sucursales #main__grilla_sucursales .pielibertador {
+        color: black;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
         grid-area: pielib;
-        color: white;
-        text-align: center;
-        font-size: 15pt;
+        font-size: 25px;
         font-style: italic; }
-      #div__sucursales main #main__grilla_sucursales .piecabildo {
+      #main__sucursales #main__grilla_sucursales .piecabildo {
+        color: black;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
         grid-area: piecab;
-        color: white;
-        text-align: center;
-        font-size: 15pt;
+        font-size: 25px;
         font-style: italic; }
-      #div__sucursales main #main__grilla_sucursales .piemaipu {
+      #main__sucursales #main__grilla_sucursales .piemaipu {
+        color: black;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
         grid-area: piemaipu;
-        color: white;
-        text-align: center;
-        font-size: 15pt;
+        font-size: 25px;
         font-style: italic; }
-  /*(CONTACTO)*/
-  #div__contacto main {
+  /*------------(CONTACTO)------------*/
+  #main__contacto {
     height: 500px; }
-    #div__contacto main .main__titulo__contacto {
-      height: 80px;
-      text-align: center;
-      font-size: 25px;
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-      color: white; } }
+    #main__contacto .main__titulo__contacto h2 {
+      font-size: 75px; } }
