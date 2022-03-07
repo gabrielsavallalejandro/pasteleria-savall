@@ -1028,7 +1028,6 @@ footer {
   /*------------(HOME)------------*/
   #main__home {
     height: 550px;
-    background-image: url(../img/cupcakes-productos.jpg);
     background-position: center; }
     #main__home .main__flex__home {
       height: 150px;
@@ -1190,7 +1189,6 @@ footer {
   /*------------(HOME)------------*/
   #main__home {
     height: 550px;
-    background-image: url(../img/cupcakes-productos.jpg);
     background-position: center; }
     #main__home .main__flex__home {
       height: 150px;
