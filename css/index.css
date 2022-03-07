@@ -646,7 +646,7 @@ footer {
   #main__sucursales {
     height: 1000px; }
     #main__sucursales .main__titulo__sucursales h2 {
-      font-size: 45px; }
+      font-size: 35px; }
     #main__sucursales #main__grilla_sucursales {
       display: grid;
       grid-template-columns: 1fr;
